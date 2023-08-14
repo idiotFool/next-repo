@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LayoutTop from "./layoutTop";
 import LayoutBottom from "./layoutBottom";
 
 import "./globals.css";
-import "./app.css"
+import "./app.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +20,22 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LayoutTop />
-        <div className="content">{children}</div>
+
+        <div className="content">
+          <h1>这是跟路由对应的UI</h1>
+
+          <span>
+            <Link href="/dashboard">去dashboard页面</Link>
+          </span>
+          <span>
+            <Link href="/about">去about页面</Link>
+          </span>
+
+          <div className="linkContent">
+            <h2>这是路由对应的内容区域</h2>
+            <div>{children}</div>
+          </div>
+        </div>
         <LayoutBottom />
       </body>
     </html>
