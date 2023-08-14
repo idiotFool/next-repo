@@ -15,8 +15,6 @@ main {
 
 .content {
   height: calc(100% - 120px);
-  display: flex;
-  justify-content: center;
   padding: 20px 40px;
 }
 
@@ -36,7 +34,7 @@ main {
   margin-top: 20px;
 }
 
-.linkWrapper span {
+.content span {
   border: 1px solid skyblue;
   background-color: skyblue;
   border-radius: 10px;
